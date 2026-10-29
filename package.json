@@ -1,0 +1,67 @@
+{
+  "name": "@deepwhale-cn/dsh-doc-batch",
+  "version": "0.1.4",
+  "description": "深鲸文档批量处理：Word / Excel / PDF 一次处理整目录（替换、提取、合并、拆分、压缩、水印、导出）",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "skill",
+    "tool",
+    "doc-batch",
+    "word",
+    "excel",
+    "pdf"
+  ],
+  "files": [
+    "lib",
+    "bin",
+    "skill",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "assets"
+  ],
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "dsh-doc-batch": "./bin/cli.mjs"
+  },
+  "engines": {
+    "dsh": ">=0.1.0-rc.6 <0.3.0",
+    "node": ">=18"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime"
+      ],
+      "platform": "web",
+      "immediately": true
+    }
+  },
+  "dependencies": {
+    "@deepwhale-cn/dsh-guard-core": "^0.5.1"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-skill": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/feely0208/dsh-doc-batch.git"
+  },
+  "homepage": "https://www.deepwhale.org.cn/skills.html",
+  "bugs": {
+    "url": "https://github.com/feely0208/dsh-doc-batch/issues"
+  },
+  "author": "温州深鲸智能科技有限公司 <contact@deepwhale.org.cn>"
+}

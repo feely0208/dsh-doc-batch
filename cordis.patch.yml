@@ -1,0 +1,4 @@
+# @deepwhale-cn/dsh-doc-batch 的组合层：装上即注册 doc-batch skill + 面板
+- insert:
+    - id: doc-batch
+      name: '@deepwhale-cn/dsh-doc-batch'
